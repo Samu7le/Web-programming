@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #ddd;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background: #999;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #222;
+  padding: 6px 12px;
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  background: #666;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-main {
+  flex: 1;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.carousel h2 {
+  margin-bottom: 12px;
+}
+
+.carousel-placeholder {
+  background: #e0e0e0;
+  padding: 40px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.site-footer {
+  background: #ddd;
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-btn {
+  background: #bbb;
+  color: #222;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.footer-btn:hover {
+  background: #999;
+}

@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Titolo della Pagina</title>
-  <meta name="description" content="Descrizione della pagina per i motori di ricerca">
-  <link rel="stylesheet" href="style.css"> <!-- Collegamento al foglio di stile -->
-  <script defer src="script.js"></script> <!-- Collegamento al file JS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progetto Web - Layout</title>
+  <link rel="stylesheet" href="{{ asset('css/style.css')}}" />
 </head>
 <body>
+  <div class="page-wrapper">
+    <header class="site-header">
+      <div class="logo">F1</div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">News</a>
+        <a href="#">Auto</a>
+      </nav>
+      <div class="profile">
+        <div class="avatar">P</div>
+        <span>Profilo</span>
+      </div>
+    </header>
 
-  <header>
-    <h1>Benvenuto!</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Chi siamo</a></li>
-        <li><a href="#">Contatti</a></li>
-      </ul>
-    </nav>
-  </header>
+    <main class="site-main">
+      <section class="carousel">
+        <h2>Carosello News</h2>
+        <div class="carousel-placeholder">
+          <p>Contenuto del carosello</p>
+        </div>
+      </section>
+    </main>
 
-  <main>
-    <section>
-      <h2>Sezione Principale</h2>
-      <p>Questo è un paragrafo di esempio. Puoi modificare questo testo.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Il Tuo Nome. Tutti i diritti riservati.</p>
-  </footer>
-
+    <footer class="site-footer">
+      <p>© 2025 - Progetto Universitario</p>
+      <div class="footer-buttons">
+        <a class="footer-btn" href="https://github.com/Samu7le" target="_blank">GitHub</a>
+        <a class="footer-btn" href="https://www.linkedin.com/in/samuele-mul%C3%A8/" target="_blank">LinkedIn</a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
