@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progetto Web - Layout</title>
+  <link rel="stylesheet" href="{{ asset('css/style.css')}}" />
+</head>
+<body>
+  <div class="page-wrapper">
+    
+    @include('partials.header')
+    <main class="site-main">
+      <section class="carousel">
+        <h2>Carosello News</h2>
+        <div class="carousel-placeholder">
+          <p>Contenuto del carosello</p>
+        </div>
+      </section>
+    </main>
+
+    @include('partials.footer')
+  </div>
+</body>
+</html>
