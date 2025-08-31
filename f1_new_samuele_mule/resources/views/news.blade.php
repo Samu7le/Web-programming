@@ -10,21 +10,17 @@
   <div class="page-wrapper">
     
     @include('partials.header')
-    
-    <div class="news-flex-container">
-  <div class="news-left">
-    <img src="{{ asset('imgs/f1_logo.png') }}" alt="News Main">
-  </div>
-  <div class="news-right">
-    <div class="news-item">
-      
+    <div class="news-container">
+      <div class="main-item">
+          <img src="{{ asset('imgs/f1_logo.png')}}" alt="">
+      </div>
+      <div class="side-column">
+          <div class="news-item">news 2</div>
+          <div class="news-item">news 3</div>
+          <div class="news-item">news 4</div>
+      </div>
     </div>
-    <div class="news-item">
-    </div>
-    <div class="news-item">
-    </div>
-  </div>
-  </div>
+
 
     
   </div>

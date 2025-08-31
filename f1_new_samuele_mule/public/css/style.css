@@ -120,15 +120,38 @@ body {
 /*----------------------------------------SEZIONE NEWS-----------------------------*/
 
 .news-container {
-    min-height: 700px;
-    display: flex;
-    border: 8px solid black;
-    justify-content: center; /* rows axis*/
-    align-items: flex-end; /* columns axis*/
+  display: flex;
+  width: 75vw;
+  height: 500px;
+  margin: 30px auto;
+  gap: 10px;
+  
+}
+
+.main-item {
+  flex: 3;
+  border: 2px solid black;
+  background-color: #f0f0f0;
+  padding: 0px;
+}
+
+.side-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .news-item {
-    background-color: #990f0f;
-    height: 100px;
-    width: 100px;
+  flex: 1;
+  border: 2px solid grey;
+  background-color: #e0e0e0;
+  padding: 15px;
+  display: flex;
+}
+
+.main-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
