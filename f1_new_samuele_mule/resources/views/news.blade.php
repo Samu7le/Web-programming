@@ -10,20 +10,22 @@
   <div class="page-wrapper">
     
     @include('partials.header')
-    <div class="news-container">
-      <div class="main-item">
-          <img src="{{ asset('imgs/f1_logo.png')}}" alt="">
-      </div>
-      <div class="side-column">
-          <div class="news-item">news 2</div>
-          <div class="news-item">news 3</div>
-          <div class="news-item">news 4</div>
-      </div>
-    </div>
-
-
-    
+    <main class="site-main">
+        <div class="news-container">
+          <div class="main-item">
+            <a href=""> 
+              <img src="{{ asset('imgs/f1_logo.png')}}" alt="">
+            </a>
+          </div>
+          <div class="side-column">
+              <div class="news-item"> <a href="">news 2 </a> </div>
+              <div class="news-item"> <a href="">news 3 </a> </div>
+              <div class="news-item"> <a href="">news 4 </a> </div>
+          </div>
+        </div>
+    </main>
+    @include('partials.footer')  
   </div>
-  @include('partials.footer')
+  
 </body>
 </html>

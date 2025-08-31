@@ -11,11 +11,10 @@
     
     @include('partials.header')
     <main class="site-main">
-      <h1>AUTO</h1>
+        
     </main>
-
-    
+    @include('partials.footer')
   </div>
-  @include('partials.footer')
+  
 </body>
 </html>

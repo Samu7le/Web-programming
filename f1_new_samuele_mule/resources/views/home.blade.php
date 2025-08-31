@@ -9,18 +9,12 @@
 <body>
   <div class="page-wrapper">
     
-    @include('partials.header')
-    <main class="site-main">
-      <section class="carousel">
-        <h2>Carosello News</h2>
-        <div class="carousel-placeholder">
-          <p>Contenuto del carosello</p>
-        </div>
-      </section>
-    </main>
-
-    
-  </div>
+  @include('partials.header')
+  <main class="site-main">
+        
+  </main>
   @include('partials.footer')
+  </div>
+  
 </body>
 </html>
