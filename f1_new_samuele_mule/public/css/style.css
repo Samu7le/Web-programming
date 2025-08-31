@@ -1,10 +1,10 @@
+/*----------------------------------------SEZIONE COMMON-----------------------------*/
+
 * {
-  box-sizing: border-box;
   margin: 0;
-  padding: 0;
 }
 
-html, body {
+body {
   height: 100%;
   font-family: Arial, sans-serif;
   background: #f4f4f4;
@@ -16,6 +16,7 @@ html, body {
   flex-direction: column;
   min-height: 100vh;
 }
+/*----------------------------------------SEZIONE HEADER-----------------------------*/
 
 .site-header {
   display: flex;
@@ -67,6 +68,8 @@ html, body {
   justify-content: center;
 }
 
+/*----------------------------------------SEZIONE HOME-----------------------------*/
+
 .site-main {
   flex: 1;
   max-width: 1000px;
@@ -84,6 +87,8 @@ html, body {
   text-align: center;
   border-radius: 4px;
 }
+
+/*----------------------------------------SEZIONE FOOTER-----------------------------*/
 
 .site-footer {
   background: #ddd;
@@ -114,54 +119,16 @@ html, body {
 
 /*----------------------------------------SEZIONE NEWS-----------------------------*/
 
-.news-flex-container {
-  display: flex;
-  background-color: #1e1e1e;
-  max-width: 900px;
-  margin: 30px auto;
-}
-
-.news-left {
-  flex: 2;
-}
-
-.news-left img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.news-right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+.news-container {
+    min-height: 700px;
+    display: flex;
+    border: 8px solid black;
+    justify-content: center; /* rows axis*/
+    align-items: flex-end; /* columns axis*/
 }
 
 .news-item {
-  padding: 15px;
-  color: white;
-  border-bottom: 1px solid #444;
-}
-
-.news-item:first-child {
-  background-color: #c00;
-  color: white;
-}
-
-.news-date {
-  font-size: 12px;
-  text-transform: uppercase;
-  opacity: 0.7;
-}
-
-.news-title {
-  margin-top: 5px;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.news-item:first-child .news-date,
-.news-item:first-child .news-title {
-  opacity: 1;
+    background-color: #990f0f;
+    height: 100px;
+    width: 100px;
 }
