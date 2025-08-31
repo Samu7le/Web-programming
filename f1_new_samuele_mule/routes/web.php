@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,9 +20,7 @@ Route::get('/', function () {
 });
 
 //news
-Route::get('/news', function () {
-    return view('news');
-});
+Route::get('/news', [NewsController::class, "get"]);
 
 //auto
 Route::get('/auto', function () {
