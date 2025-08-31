@@ -18,9 +18,9 @@
             </a>
           </div>
           <div class="side-column">
-              <div class="news-item"> <a href="">news 2 </a> </div>
-              <div class="news-item"> <a href="">news 3 </a> </div>
-              <div class="news-item"> <a href="">news 4 </a> </div>
+            @foreach($news_list as $news)
+              <div class="news-item"> <a href="{{route('news.show', $news->title)}}">{{$news->title}} </a> </div>
+            @endforeach
           </div>
         </div>
     </main>

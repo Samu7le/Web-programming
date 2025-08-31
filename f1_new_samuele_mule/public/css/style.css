@@ -85,14 +85,18 @@ body {
 .news-container {
     display: flex;
     flex-direction: column;
+    height: 75vh;
     overflow-y: scroll;
 }
 
 .news-item-list {
-    width: 50%;
-    height: 6em; 
+    width: 90%;
+    height: 8em; 
     /* serve per avere una misura rispetto al font */
     background-color: #ddd;
+    margin: 8px;
+    border-radius: 10px;
+    box-shadow: 6px 6px #666;
 }
 
 .news-card {

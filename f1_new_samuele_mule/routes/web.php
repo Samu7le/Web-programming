@@ -15,12 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 //home
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [NewsController::class, "home"]);
 
 //news
 Route::get('/news', [NewsController::class, "get"]);
+Route::get('/news/{title}', [NewsController::class, "show"])->name('news.show');
 
 //auto
 Route::get('/auto', function () {
