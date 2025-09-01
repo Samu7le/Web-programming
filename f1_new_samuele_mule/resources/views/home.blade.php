@@ -13,7 +13,7 @@
     <main class="site-main">
         <div class="news-container-home">
           <div class="main-item">
-            <a href=""> 
+            <a href="{{ url('/about') }}"> 
               <img src="{{ asset('imgs/f1_logo.png')}}" alt="">
             </a>
           </div>

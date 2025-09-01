@@ -21,9 +21,9 @@ Route::get('/', [NewsController::class, "home"]);
 Route::get('/news', [NewsController::class, "get"]);
 Route::get('/news/{title}', [NewsController::class, "show"])->name('news.show');
 
-//auto
-Route::get('/auto', function () {
-    return view('auto');
+//about
+Route::get('/about', function () {
+    return view('about');
 });
 
 //profile
