@@ -18,12 +18,12 @@
                 <li class="news-item-list">
                     
                         <div class="news-card">
-                            <div clas="news-card-col-photo">
+                            <div class="news-card-col-photo">
                                 <a href="{{route('news.show', $news->title)}}">
                                     <img class="news-card-img" src="{{ $news->urlToImage}}" alt="">
                                 </a>
                             </div>
-                            <div clas="news-card-col-text">
+                            <div class="news-card-col-text">
                                 <h2>{{$news->title}}</h2>
                                 <hr>
                                 <p>{{$news->description}}</p>
