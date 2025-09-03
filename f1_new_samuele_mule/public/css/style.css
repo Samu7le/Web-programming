@@ -107,7 +107,7 @@ body {
 }
 
 .news-card-col-photo {
-    width: 30%;
+    width: 15%;
     height: 100%;
 }
 
@@ -117,15 +117,12 @@ body {
     flex-grow: 1;
 }
 
-/* .news-card-col-2 h2 {
-    padding: 15px;
-    height: 30%;
-}
+
 
 .news-card-col-2 p {
     padding: 15px;
     height: 60%;
-} */
+} 
 
 .news-card-img {
     width: auto;
@@ -202,5 +199,5 @@ body {
   display: block;
 }
 
-/*----------------------------------------SEZIONE AUTO-----------------------------*/
+/*----------------------------------------SEZIONE ABOUT-----------------------------*/
 
