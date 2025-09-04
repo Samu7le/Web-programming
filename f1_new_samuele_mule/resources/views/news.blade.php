@@ -16,20 +16,25 @@
             <ul class="news-container">
                 @foreach($news_list as $news)
                 <li class="news-item-list">
-                    
-                        <div class="news-card">
-                            <div class="news-card-col-photo">
-                                <a href="{{route('news.show', $news->title)}}">
-                                    <img class="news-card-img" src="{{ $news->urlToImage}}" alt="">
-                                </a>
-                            </div>
-                            <div class="news-card-col-text">
-                                <h2>{{$news->title}}</h2>
-                                <hr>
-                                <p>{{$news->description}}</p>
-                            </div>
+
+                    <div class="news-card">
+                        <div class="news-card-col-photo">
+                            <a href="{{route('news.show', $news->title)}}">
+                                <img class="news-card-img" src="{{ $news->urlToImage}}" alt="">
+                            </a>
                         </div>
-                    
+                        <form method="POST" action="{{ route('posts.store') }}" class="news-card-col-text">
+                            @csrf
+                            <input type="text" value="{{$news->title}}" name="title">
+                            <hr>
+                            <input type="text" value="{{$news->description}}" name="description">
+                            <hr>
+                            <input type="hidden" value="{{ $news->urlToImage}}" name= "image">
+                            <input type="hidden" value="{{ $news->content}}" name= "content">
+                            <input type="submit" value="repost">
+                        </form>
+                    </div>
+
                 </li>
                 @endforeach
             </ul>

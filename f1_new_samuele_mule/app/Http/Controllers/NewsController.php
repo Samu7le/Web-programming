@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
@@ -19,12 +20,7 @@ class NewsController extends Controller
 
     public function home()
     {
-        $url = env("URL","") . env("API_KEY_NEWS", "");
-        $client = new Client();
-        $response = $client->get($url);
-        $news = json_decode($response->getBody());
-        // dd($news->articles);
-        return view("home", ["news_list" => array_slice($news->articles,0,3)]);
+        return view("home", ["news_list" => Post::all()]);
     }
 
     public function show(string $title)

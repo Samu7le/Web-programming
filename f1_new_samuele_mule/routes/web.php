@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,7 @@ Route::get('/', [NewsController::class, "home"]);
 //news
 Route::get('/news', [NewsController::class, "get"]);
 Route::get('/news/{title}', [NewsController::class, "show"])->name('news.show');
+Route::post('/posts', [PostsController::class, "store"])->name('posts.store');
 
 //about
 Route::get('/about', function () {
