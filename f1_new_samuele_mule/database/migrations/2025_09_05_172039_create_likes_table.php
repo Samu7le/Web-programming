@@ -18,6 +18,7 @@ return new class extends Migration
             $table->timestamps();
             $table->foreignIdFor(User::class)->constrained()->cascadeOnDelete();
             $table->foreignIdFor(Comment::class)->constrained()->cascadeOnDelete();
+            $table->unique(array("user_id", "comment_id"));
         });
     }
 

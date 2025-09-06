@@ -14,28 +14,12 @@ class NewsController extends Controller
         $client = new Client();
         $response = $client->get($url);
         $news = json_decode($response->getBody());
-        // dd($news->articles);
         return view("news", ["news_list" => $news->articles]);
     }
 
     public function home()  
     {
-        return view("home", ["news_list" => Post::orderBy("created_at", "desc")->get()->take(3)]);
+        return view("home", ["posts" => Post::orderBy("created_at", "desc")->get()->take(3)]);
     }
 
-    public function show(string $title)
-    {
-        $url = env("URL","") . env("API_KEY_NEWS", "");
-        $client = new Client();
-        $response = $client->get($url);
-        $news = json_decode($response->getBody());
-        $filtered = array_filter($news->articles, function ($n) use ($title) {
-            return $n->title === $title;
-        });
-        $filtered = array_values($filtered);
-        if (count($filtered) == 1){
-            $tnews = $filtered[0];
-        }
-        return view("news", ["news_list" => $filtered]);
-    }
 }

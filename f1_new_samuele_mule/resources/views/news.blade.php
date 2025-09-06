@@ -19,7 +19,7 @@
 
                     <div class="news-card">
                         <div class="news-card-col-photo">
-                            <a href="{{route('news.show', $news->title)}}">
+                            <a href="{{$news->url}}">
                                 <img class="news-card-img" src="{{ $news->urlToImage}}" alt="">
                             </a>
                         </div>

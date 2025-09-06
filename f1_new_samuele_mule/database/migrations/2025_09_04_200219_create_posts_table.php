@@ -16,10 +16,11 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->foreignIdFor(User::class)->constrained()->cascadeOnDelete();
-            $table->string('title');
+            $table->string('title')->nullable(false);
             $table->string('url_image');
             $table->text('description');
             $table->text('content');
+            $table->unique(array("user_id", "title"));
         });
     }
 
