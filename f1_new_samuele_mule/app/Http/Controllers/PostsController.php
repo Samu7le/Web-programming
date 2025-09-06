@@ -9,13 +9,18 @@ class PostsController extends Controller
 {
     public function store(Request $request)
     {
-        Post::create([
+        $post = Post::create([
             'user_id' => 1,
             'title' => $request->title,
             'url_image' => $request->image,
             'description' => $request->description,
             'content' => $request->content
         ]);
-        return view("home", ["news_list" => Post::all()]);
+        return view("post", ["post" => $post]);
+    }
+
+    public function show(Post $post)
+    {
+        return view("post", ["post" => $post]);
     }
 }

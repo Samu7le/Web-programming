@@ -19,7 +19,7 @@
           </div>
           <div class="side-column">
             @foreach($news_list as $news)
-              <div class="news-item"> <a href="{{route('news.show', $news->title)}}">{{$news->title}} </a> </div>
+              <div class="news-item"> <a href="{{route('posts.show', $news->id)}}">{{$news->title}} </a> </div>
             @endforeach
           </div>
         </div>

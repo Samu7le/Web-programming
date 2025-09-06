@@ -18,9 +18,9 @@ class NewsController extends Controller
         return view("news", ["news_list" => $news->articles]);
     }
 
-    public function home()
+    public function home()  
     {
-        return view("home", ["news_list" => Post::all()]);
+        return view("home", ["news_list" => Post::orderBy("created_at", "desc")->get()->take(3)]);
     }
 
     public function show(string $title)
