@@ -27,6 +27,7 @@ Route::get('/', [NewsController::class, "home"])->name('home');
 Route::get('/news', [NewsController::class, "get"])->name('news.get')->middleware('auth');
 
 //posts
+Route::get('/posts', [PostsController::class, "get"])->name('posts.get');
 Route::post('/posts', [PostsController::class, "store"])->name('posts.store')->middleware('auth');
 Route::get('/posts/{post}', [PostsController::class, "show"])->name('posts.show');
 

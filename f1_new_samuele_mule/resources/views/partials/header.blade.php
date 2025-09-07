@@ -2,7 +2,10 @@
       <div class="logo">F1</div>
       <nav class="nav">
         <a href="{{ url('/') }}">Home</a>
+        @auth
         <a href="{{ url('/news') }}">News</a>
+        @endauth
+        <a href="{{ url('/posts') }}">Posts</a>
       </nav>
       <div class="profile">
         @guest

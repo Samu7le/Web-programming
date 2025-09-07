@@ -25,7 +25,7 @@ body {
   flex: 1;
   max-width: 100%;
   margin: 20px;
-  padding: 20px;  
+  padding: 20px;
 }
 
 /*----------------------------------------SEZIONE HEADER-----------------------------*/
@@ -83,52 +83,52 @@ body {
 /*----------------------------------------SEZIONE NEWS-----------------------------*/
 
 .news-container {
-    display: flex;
-    flex-direction: column;
-    height: 75vh;
-    overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  overflow-y: scroll;
 }
 
 .news-item-list {
-    width: 90%;
-    height: 8em; 
-    /* serve per avere una misura rispetto al font */
-    background-color: #ddd;
-    margin: 8px;
-    border-radius: 10px;
-    box-shadow: 6px 6px #666;
+  width: 90%;
+  height: 8em;
+  /* serve per avere una misura rispetto al font */
+  background-color: #ddd;
+  margin: 8px;
+  border-radius: 10px;
+  box-shadow: 6px 6px #666;
 }
 
 .news-card {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
 }
 
 .news-card-col-photo {
-    width: 15%;
-    height: 100%;
+  width: 15%;
+  height: 100%;
 }
 
 .news-card-col-text {
-    width: 100%;
-    height: 100%;
-    flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
 }
 
 
 
 .news-card-col-2 p {
-    padding: 15px;
-    height: 60%;
-} 
+  padding: 15px;
+  height: 60%;
+}
 
 .news-card-img {
-    width: auto;
-    height: 100%;
-    object-fit: cover;
-    padding: 15px;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  padding: 15px;
 }
 
 
@@ -168,7 +168,7 @@ body {
   width: 75vw;
   height: 500px;
   margin: 60px auto;
-  gap: 10px; 
+  gap: 10px;
 }
 
 .main-item {
@@ -176,6 +176,15 @@ body {
   border: 2px solid black;
   background-color: #f0f0f0;
   padding: 0px;
+}
+
+.main-item a h1{
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  margin-top: -7%;
+  z-index: 1;
+  position: relative;
 }
 
 .side-column {
@@ -200,4 +209,3 @@ body {
 }
 
 /*----------------------------------------SEZIONE ABOUT-----------------------------*/
-

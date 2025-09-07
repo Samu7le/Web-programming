@@ -24,4 +24,9 @@ class PostsController extends Controller
     {
         return view("post", ["post" => $post]);
     }
+
+    public function get()
+    {
+        return view("posts", ["posts" => Post::all()]);
+    }
 }

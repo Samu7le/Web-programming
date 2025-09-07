@@ -25,9 +25,11 @@
                         </div>
                         <form method="POST" action="{{ route('posts.store') }}" class="news-card-col-text">
                             @csrf
-                            <input type="text" value="{{$news->title}}" name="title">
+                            <input type="hidden" value="{{$news->title}}" name="title">
+                            <h3>{{$news->title}}</h3>
                             <hr>
-                            <input type="text" value="{{$news->description}}" name="description">
+                            <input type="hidden" value="{{$news->description}}" name="description">
+                            <p>{{$news->description}}</p>
                             <hr>
                             <input type="hidden" value="{{ $news->urlToImage}}" name= "image">
                             <input type="hidden" value="{{ $news->content}}" name= "content">
