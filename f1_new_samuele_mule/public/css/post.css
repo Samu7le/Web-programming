@@ -1,0 +1,18 @@
+.post-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.post-col {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+}
+
+.post-col div img {
+    object-fit: cover;
+    width: 50%;
+    height: auto;
+}

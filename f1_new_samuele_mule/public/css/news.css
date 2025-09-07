@@ -1,0 +1,50 @@
+/*----------------------------------------SEZIONE NEWS-----------------------------*/
+
+.news-container {
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  overflow-y: scroll;
+}
+
+.news-item-list {
+  width: 90%;
+  height: 8em;
+  /* serve per avere una misura rispetto al font */
+  background-color: #ddd;
+  margin: 8px;
+  border-radius: 10px;
+  box-shadow: 6px 6px #666;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.news-card-col-photo {
+  width: 15%;
+  height: 100%;
+}
+
+.news-card-col-text {
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+}
+
+
+
+.news-card-col-2 p {
+  padding: 15px;
+  height: 60%;
+}
+
+.news-card-img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  padding: 15px;
+}

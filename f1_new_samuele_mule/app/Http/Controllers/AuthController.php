@@ -15,7 +15,8 @@ class AuthController extends Controller
             [
                 'name' => 'required|min:3|max:20',
                 'email' => 'required|email|unique:users,email',
-                'password' => 'required|confirmed'
+                'password' => 'required|confirmed',
+                'url_image' => 'required|url'
             ]
         );
 
@@ -24,7 +25,7 @@ class AuthController extends Controller
                 'name' => $validated['name'],
                 'email' => $validated['email'],
                 'password' => Hash::make($validated['password']),
-                'url_image' => "https://api.dicebear.com/9.x/identicon/svg?seed=" . $validated['name']
+                'url_image' => $validated['url_img']
             ]
         );
         auth()->attempt($validated);

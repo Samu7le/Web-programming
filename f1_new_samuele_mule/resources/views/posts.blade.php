@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Progetto Web - Layout</title>
     <link rel="stylesheet" href="{{ asset('css/style.css')}}" />
+    <link rel="stylesheet" href="{{ asset('css/posts.css')}}" />
 </head>
 
 <body>
@@ -13,23 +14,23 @@
 
         @include('partials.header')
         <main class="site-main">
-            <ul class="news-container">
+            <ul class="post-container">
                 @foreach($posts as $post)
-                <li class="news-item-list">
+                <li class="post-item-list">
 
-                    <div class="news-card">
-                        <div class="news-card-col-photo">
+                    <div class="post-card">
+                        <div class="post-card-col-photo">
                             <a href="{{ route('posts.show', $post->id) }}">
-                                <img class="news-card-img" src="{{ $post->url_image}}" alt="">
+                                <img class="post-card-img" src="{{ $post->url_image}}" alt="">
                             </a>
                         </div>
-                        <div class="news-card-col-text">
+                        <div class="post-card-col-text">
                             <h2> l'Utente {{$post->user->name }} ha postato:</h2>
                             <hr>
                             <h3> {{ $post->title }}</h3>
                             <hr>
                             <p> {{ $post->description }} </p>
-                            <div style="display: flex; justify-content: end; padding: 10px">
+                            <div class="post-link">
                                 <a href="{{ route('posts.show', $post->id) }}"> vai al post</a>
                             </div>
                             

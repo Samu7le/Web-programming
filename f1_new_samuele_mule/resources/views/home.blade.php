@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Progetto Web - Layout</title>
   <link rel="stylesheet" href="{{ asset('css/style.css')}}" />
+  <link rel="stylesheet" href="{{ asset('css/home.css')}}" />
   <script src="{{ asset('js/home.js') }}" defer></script>
 </head>
 

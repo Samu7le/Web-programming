@@ -1,0 +1,46 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.form-image-container {
+    display: flex;
+    justify-content: center
+}
+
+.form-image-container div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 204px;
+    height: 204px;
+    border: black solid 2px;
+    overflow: hidden;
+}
+
+.form-image-container div img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.separator {
+    width: 40%;
+    margin: 1rem;
+}
+
+.form-input{
+    display: flex; flex-direction: row; align-items: center; justify-content: space-between;
+}
+
+.form-button{
+    display: flex; justify-content: end;
+}

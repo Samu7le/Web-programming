@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Progetto Web - Layout</title>
   <link rel="stylesheet" href="{{ asset('css/style.css')}}" />
+  <link rel="stylesheet" href="{{ asset('css/auth.css')}}" />
+  <script src="{{ asset('js/auth.js')}}" defer></script>
 </head>
 <body>
   <div class="page-wrapper">
     
   @include('partials.header')
   <main class="site-main">
-        <form method="POST" action="{{ route('users.get') }}" style="display: flex; flex-direction: column; align-items: center; justify-content: space-around;">
+        <form method="POST" action="{{ route('users.get') }}" class="form-auth" name="login">
             @csrf
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" />

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Progetto Web - Layout</title>
     <link rel="stylesheet" href="{{ asset('css/style.css')}}" />
+    <link rel="stylesheet" href="{{ asset('css/post.css')}}" />
 </head>
 
 <body>
@@ -14,13 +15,13 @@
         @include('partials.header')
         <main class="site-main">
             <!-- mettere poi nel css -->
-            <div style="display: flex; flex-direction: row; width: 100%;">
-                <div style="display: flex; flex-direction: column; height: 100%; width: 50%;">
+            <div class="post-container">
+                <div class="post-col">
                     <div>
                         <h1>the user {{$post->user->name}} has published</h1>
                     </div>
                     <div>
-                        <img src="{{ $post->url_image}}" alt="{{$post->title}}" style="object-fit: cover; width: 50%; height: auto;">
+                        <img src="{{ $post->url_image}}" alt="{{$post->title}}">
                     </div>
                     <hr>
                     <div>
@@ -28,7 +29,7 @@
                         <p> {{ $post->description }} </p>
                     </div>
                 </div>
-                <div style="display: flex; flex-direction: column; height: 100%; width: 50%;">
+                <div class="post-col">
                     <div>
                         @auth
                         <form action="{{ url('/comments') }}" method="post">
