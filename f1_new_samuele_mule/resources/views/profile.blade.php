@@ -18,15 +18,20 @@
         <form method="POST" action="{{ route('change.image') }}" class="form-profile">
           @csrf
           <span class="form-image-container">
-            <div >
+            <div>
               <img src="{{ Auth::user()->url_image }}" alt="avatar">
             </div>
           </span>
-          <input type="text" value="" placeholder="inserisci qui link" name="image">
-          @error('image')
-          <span class="error-text">{{ $message }}</span>
-          @enderror
-          <input type="submit" value="cambia immagine">
+          <span class="form-input">
+            <label for="image">url image</label>
+            <input type="text" value="" placeholder="inserisci qui link" name="image">
+            @error('image')
+            <span class="error-text">{{ $message }}</span>
+            @enderror
+          </span>
+          <span class="form-button">
+            <input type="submit" value="cambia immagine">
+          </span>
 
         </form>
         <div class="separator">

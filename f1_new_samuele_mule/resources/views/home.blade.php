@@ -19,7 +19,7 @@
         <div class="main-item" id="main-item">
           <a href="{{ url('/about') }}">
             <img src="{{ asset('imgs/f1_logo.png')}}" alt="">
-            <h1>About:</h1>
+            <h2>About:</h2>
           </a>
         </div>
         <div class="side-column">
