@@ -17,15 +17,12 @@
             @csrf
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" />
-            @error('email')
-            <h1>{{ $message }}</h1>
-            @enderror
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" />
-            @error('password')
+            <input type="submit" value="Login">
+            @error('credential')
             <h1>{{ $message }}</h1>
             @enderror
-            <input type="submit" value="Login">
         </form>
   </main>
   @include('partials.footer')

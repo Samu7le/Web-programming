@@ -51,6 +51,11 @@ class AuthController extends Controller
             return redirect()->route("home");
 
         }
+        else{
+            $errors= new MessageBag();
+            $errors->add('credential', 'Credenziali errate!');
+            return redirect()->route("users.get")->withErrors($errors);
+        }
         return redirect()->route("register");
     }
 
