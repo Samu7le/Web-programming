@@ -27,7 +27,7 @@ class AuthController extends Controller
                 'name' => $validated['name'],
                 'email' => $validated['email'],
                 'password' => Hash::make($validated['password']),
-                'url_image' => $validated['url_img']
+                'url_image' => $validated['url_image']
             ]
         );
         auth()->attempt($validated);
