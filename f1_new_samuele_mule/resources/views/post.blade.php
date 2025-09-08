@@ -14,7 +14,9 @@
 
         @include('partials.header')
         <main class="site-main">
-            <!-- mettere poi nel css -->
+            @error('post')
+            <span class="error-text">{{ $message }}</span>
+            @enderror
             <div class="post-container">
                 <div class="post-col">
                     <div>
@@ -51,7 +53,7 @@
                                 @auth
                                 <form action="{{ url('/likes') }}" method="post">
                                     @csrf
-                                    <label>{{ count($comment->likes) }}</label>
+                                    <label>{{ count($comment->likes) }}</label>                    
                                     <input type="submit" value="❤️">
                                     @error('like')
                                     <span class="error-text">{{ $message }}</span>
