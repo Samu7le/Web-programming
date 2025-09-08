@@ -4,10 +4,11 @@
     <div class="logo">F1</div>
     <nav class="nav">
       <a href="{{ url('/') }}">Home</a>
-      @auth
+      
       <a href="{{ url('/news') }}">News</a>
-      @endauth
+      @auth
       <a href="{{ url('/posts') }}">Posts</a>
+      @endauth
     </nav>
     <div class="profile">
       @guest
@@ -41,10 +42,11 @@
     <div id="link-container">
       <div class="link-col">
         <a href="{{ url('/') }}">Home</a>
-        @auth
+        
         <a href="{{ url('/news') }}">News</a>
-        @endauth
+        @auth
         <a href="{{ url('/posts') }}">Posts</a>
+        @endauth
 
         @guest
         <a class="login" href="{{ url('/login') }}">

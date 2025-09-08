@@ -24,10 +24,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [NewsController::class, "home"])->name('home');
 
 //news
-Route::get('/news', [NewsController::class, "get"])->name('news.get')->middleware('auth');
+Route::get('/news', [NewsController::class, "get"])->name('news.get');
 
 //posts
-Route::get('/posts', [PostsController::class, "get"])->name('posts.get');
+Route::get('/posts', [PostsController::class, "get"])->name('posts.get')->middleware('auth');
 Route::post('/posts', [PostsController::class, "store"])->name('posts.store')->middleware('auth');
 Route::get('/posts/{post}', [PostsController::class, "show"])->name('posts.show');
 
