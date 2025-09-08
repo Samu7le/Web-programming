@@ -34,6 +34,6 @@ class PostsController extends Controller
 
     public function get()
     {
-        return view("posts", ["posts" => Post::all()]);
+        return view("posts", ["posts" => Post::latest()->get()]);
     }
 }
